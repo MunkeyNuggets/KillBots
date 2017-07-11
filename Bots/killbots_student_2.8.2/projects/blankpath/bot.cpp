@@ -65,10 +65,15 @@ void Blank::pathFind(NodePos end)
 	//To find a path :
 	//Clear map data.
 	Map::clear;
-	//	pathFound = false
-
+	//pathFound = false
+	bool pathFound = false;
 	//	Push end node into openList.
+	openList.push_back(end);
 	//	While(openList is not empty) // if it's empty, there's no valid path
+	while (openList.size == 0) {
+		//I am not sure about this...
+		pathFound = false;
+	}
 	//	Find node in openList with the smallest F value.
 	//	For oy = -1 to 1 // offset y
 	//	For ox = -1 to 1 // offset x
