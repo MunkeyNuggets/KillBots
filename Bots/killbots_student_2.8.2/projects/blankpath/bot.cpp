@@ -60,11 +60,13 @@ void Blank::pathFind(NodePos end)
 {
 	//Map holds data.
 	//	NodePos can identify a node in the map.
-	//	std::vector<NodePos> openList;
+	std::vector<NodePos> openList;
 
 	//To find a path :
 	//Clear map data.
+	Map::clear;
 	//	pathFound = false
+
 	//	Push end node into openList.
 	//	While(openList is not empty) // if it's empty, there's no valid path
 	//	Find node in openList with the smallest F value.
