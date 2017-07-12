@@ -1,0 +1,12 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  bot.cpp
+d:\sae\github\2017-t2-studio02\killbots\bots\killbots_student_2.8.2\projects\blankpath\pathfind.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\sae\github\2017-t2-studio02\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(14): warning C4311: 'type cast': pointer truncation from 'Blank *const ' to 'int'
+d:\sae\github\2017-t2-studio02\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(14): warning C4302: 'type cast': truncation from 'Blank *const ' to 'int'
+d:\sae\github\2017-t2-studio02\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'kf::u32', possible loss of data
+d:\sae\github\2017-t2-studio02\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(67): error C3867: 'Map::clear': non-standard syntax; use '&' to create a pointer to member
+d:\sae\github\2017-t2-studio02\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(73): error C3867: 'std::vector<NodePos,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=NodePos
+          ]

@@ -70,39 +70,56 @@ void Blank::pathFind(NodePos end)
 	//	Push end node into openList.
 	openList.push_back(end);
 	//	While(openList is not empty) // if it's empty, there's no valid path
-	while (openList.size == 0) {
-		//I am not sure about this...
-		pathFound = false;
-	}
-	//	Find node in openList with the smallest F value.
-	//	For oy = -1 to 1 // offset y
-	//	For ox = -1 to 1 // offset x
-	//	If ox == 0 and oy == 0 then continue // don't look at itself
-	//	Adjacent nodepos is current nodepos + (x, y)
-	//	New G = current node G + adjacent node C.
-	//	If adjacent node is closed or a wall
-	//	Do nothing.
-	//	Else If adjacent node is open and new g < adjacent g
-	//	adjacent G = new G
-	//	adjacent h = heuristic
-	//	adjacent parent = current nodepos
-	//	adjacent f = adjacent g + adjacent heuristic
-	//	End
-	//	Else If adjacent node is unused
-	//	adjacent G = new G
-	//	adjacent h = heuristic
-	//	adjacent parent = current nodepos
-	//	adjacent f = adjacent g + adjacent heuristic
-	//	set adjacent node to open and push on the open list
-	//	End
-	//	End
-	//	End
-	//	Remove current node from open list and change it's state to closed.
-	//	End
+	while (openList.size =! 0 && pathFound == false) {
+			//	For oy = -1 to 1 // offset y
+		for (0; 0 == 1;) 
+		{
+			//	For ox = -1 to 1 // offset x
+			for (0; 0 == 1;)
+			{
 
+			}
+			//	If ox == 0 and oy == 0 then continue // don't look at itself
+			if (0 == 1)
+			{
+
+			}
+			//	Adjacent nodepos is current nodepos + (x, y)
+			//	New G = current node G + adjacent node C.
+			//	If adjacent node is closed or a wall
+			if (0 == 1) 
+			{
+				//	Do nothing.
+			}
+			//	Else If adjacent node is open and new g < adjacent g
+			else if (int i = 1)
+			{
+				//	adjacent G = new G
+				//	adjacent h = heuristic
+				//	adjacent parent = current nodepos
+				//	adjacent f = adjacent g + adjacent heuristic
+				//	End
+			}
+			//	Else If adjacent node is unused
+			else if (int i = 0)
+			{
+				//	adjacent G = new G
+				//	adjacent h = heuristic
+				//	adjacent parent = current nodepos
+				//	adjacent f = adjacent g + adjacent heuristic
+				//	set adjacent node to open and push on the open list
+			//	End
+			}
+		//	End
+		}
+	//	End	
+	}
+			//	Remove current node from open list and change it's state to closed.
+//	End
+}
 	//	Now you can follow parent nodes from target back until the start to get the path.
 
 	//	To fill the map(dijkstra), set adjacent h to 0 above.
 	//	This pseudo code doesn't stop when it finds a path, it keeps filling. To make it stop early, change the while loop to be while(openList is not empty and pathFound is false)
-}
+
 
