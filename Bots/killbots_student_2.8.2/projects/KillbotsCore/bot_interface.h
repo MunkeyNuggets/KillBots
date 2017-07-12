@@ -47,7 +47,7 @@ class BotOutput
 public:
 	enum Action
 	{
-		scan=0,
+		scan,
 		shoot
 	};
 	kf::Vector2 moveDirection;

@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blank27", "projects\blank27
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blankpath", "projects\blankpath\blankpath.vcxproj", "{E496A5BE-7687-414D-935A-361119943E7B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trumpbot", "projects\trumpbot\trumpbot.vcxproj", "{39984338-838A-45CF-A77E-7205ADEF904B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -35,6 +37,10 @@ Global
 		{E496A5BE-7687-414D-935A-361119943E7B}.Debug|x64.Build.0 = Debug|x64
 		{E496A5BE-7687-414D-935A-361119943E7B}.Release|x64.ActiveCfg = Release|x64
 		{E496A5BE-7687-414D-935A-361119943E7B}.Release|x64.Build.0 = Release|x64
+		{39984338-838A-45CF-A77E-7205ADEF904B}.Debug|x64.ActiveCfg = Debug|x64
+		{39984338-838A-45CF-A77E-7205ADEF904B}.Debug|x64.Build.0 = Debug|x64
+		{39984338-838A-45CF-A77E-7205ADEF904B}.Release|x64.ActiveCfg = Release|x64
+		{39984338-838A-45CF-A77E-7205ADEF904B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

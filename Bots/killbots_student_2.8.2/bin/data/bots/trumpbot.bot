@@ -1,0 +1,6 @@
+<bot name="TrumpBot" debug="trumpbot/trumpbot_d.dll" release="trumpbot/trumpbot.dll" threadSafe="true">
+  <sprite file="trumpbot/trump.png" x="0" y="0" w="307" h="347" angleOffset="-90" face="move"/>
+  <sprite file="trumpbot/trump2.png" x="0" y="0" w="371" h="526" angleOffset="-90" face="move"/>
+  <bulletsprite file="sprites/bullet.png" x="0" y="0" w="16" h="16"/>
+  <sound shot="data/bots/trumpbot/bing.wav" hurt="data/bots/trumpbot/wrong.wav" dead="data/bots/trumpbot/hardtime.wav" />
+</bot>
