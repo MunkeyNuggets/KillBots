@@ -20,11 +20,20 @@ public:
 	virtual void result(bool won);
 	virtual void bulletResult(bool hit);
 	virtual void pathFind(NodePos end);
+	void pickRandomTarget();
 
 	kf::Xor128 m_rand;
 	BotInitialData m_initialData;
 	kf::Vector2 dir;
 	Map m_map;
+	//kf::Xor128 m_rand;				// A random number generator.
+	//BotInitialData m_initialData;	// Initial bot data. This contains map data.
+	kf::Vector2 aimDir;				// The direction the bot is aiming.
+	kf::Vector2 target;				// The target for movement.
+	kf::Vector2 enemyPos;			// Last known location of an enemy.
+	int enemySpottedFrame;			// Frame number when the enemy was spotted (used to tell how old the enemyPos is)
+	int frameNumber;				// Current frame number (incremented every update, each frame is 0.1s).
+	int lastHealth;						// Health from the last frame. This is used to track damage to the bot.
 };
 
 

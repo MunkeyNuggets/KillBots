@@ -41,7 +41,8 @@ void Blank::update(const BotInput &input, BotOutput27 &output)
 {
 	output.lines.clear();
 	output.text.clear();
-	//kf::Vector2 delta = target - input.position;
+	kf::Vector2 delta = target - input.position;
+	output.moveDirection = delta;
 	m_map.draw(output.lines, output.text, true, false, false);
 	kf::Vector2 parent = kf::convertVector2 <kf::Vector2>(m_map.getNode(input.position).parent);
 	output.moveDirection = parent - input.position + kf::Vector2(0.5f, 0.5f);
@@ -59,19 +60,28 @@ void Blank::bulletResult(bool hit)
 
 }
 
-void Blank::pathFind(NodePos end)
+void Blank::pickRandomTarget()
+{
+	int index;
+	do
+	{
+		target.set(int(m_rand.norm() * (m_initialData.mapData.width - 3)) + 1.5, int(m_rand.norm() * (m_initialData.mapData.height - 3)) + 1.5);
+		index = int(target.x) + int(target.y) * m_initialData.mapData.width;
+	} while (m_initialData.mapData.data[index].wall);
+}
+
+void Blank::pathFind(NodePos endOfPath)
 {
 	//Map holds data.
 	//	NodePos can identify a node in the map.
 	std::vector<NodePos> openList;
-
 	//To find a path :
 	//Clear map data.
 	m_map.clear();
 	//pathFound = false
 	bool pathFound = false;
 	//	Push end node into openList.
-	openList.push_back(end);
+	openList.push_back(endOfPath);
 	//	While(openList is not empty) // if it's empty, there's no valid path
 	while (openList.size() != 0 && pathFound == false)
 	{
@@ -131,12 +141,9 @@ void Blank::pathFind(NodePos end)
 					//	set adjacent node to open and push on the open list
 					m_map.getNode(adjacentPos).state = Node::StateOpen;
 					openList.push_back(adjacentPos);
-				//	End
 				}
 			}
-			//	End
 		}
-		//	End	
 		//	Remove current node from open list and change it's state to closed.
 		m_map.getNode(currentPos).state = Node::StateClosed;
 		for (auto it = openList.begin(); it != openList.end(); ++it)
@@ -147,13 +154,25 @@ void Blank::pathFind(NodePos end)
 				break;
 			}
 		}
+		if (currentPos == endOfPath) 
+		{
+
+		}
 	}
-	
-//	End
 }
 //	Now you can follow parent nodes from target back until the start to get the path.
 
 //	To fill the map(dijkstra), set adjacent h to 0 above.
 //	This pseudo code doesn't stop when it finds a path, it keeps filling. To make it stop early, change the while loop to be while(openList is not empty and pathFound is false)
+
+void resetPoint()
+{
+	kf::Vector2 topLeft(1, 1);
+	kf::Vector2 bottomRight(30, 30);
+	if (int i = 1)
+	{
+		//TODO
+	}
+}
 
 
