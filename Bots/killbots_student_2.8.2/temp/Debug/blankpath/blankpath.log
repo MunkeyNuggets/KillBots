@@ -4,19 +4,20 @@ c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blank
 c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(14): warning C4311: 'type cast': pointer truncation from 'Blank *const ' to 'int'
 c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(14): warning C4302: 'type cast': truncation from 'Blank *const ' to 'int'
 c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'kf::u32', possible loss of data
-c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(114): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(125): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(138): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(25): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(134): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(145): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(158): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(194): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\dev\sdk\include\kf\kf_vector2.h(543): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
-  c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(48): note: see reference to function template instantiation 'T1 kf::convertVector2<kf::Vector2,NodePos>(const T2 &)' being compiled
+  c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(82): note: see reference to function template instantiation 'T1 kf::convertVector2<kf::Vector2,NodePos>(const T2 &)' being compiled
           with
           [
               T1=kf::Vector2,
               T2=NodePos
           ]
 c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\dev\sdk\include\kf\kf_vector2.h(544): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
-c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(92): warning C4700: uninitialized local variable 'oy' used
-c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\blankpath\bot.cpp(92): warning C4700: uninitialized local variable 'ox' used
   blankpath.vcxproj -> C:\Users\bHoughton\Documents\KillBots\Bots\killbots_student_2.8.2\bin\data\bots\blankpath\blankpath_d.dll
   blankpath.vcxproj -> C:\Users\bHoughton\Documents\KillBots\Bots\killbots_student_2.8.2\bin\data\bots\blankpath\blankpath_d.pdb (Full PDB)

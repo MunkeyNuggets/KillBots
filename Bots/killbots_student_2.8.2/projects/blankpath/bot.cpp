@@ -22,11 +22,12 @@ void Blank::init(const BotInitialData &initialData, BotAttributes &attrib)
 {
 	m_initialData = initialData;
 	attrib.health = 1.0;
-	attrib.motor = .5;
+	attrib.motor = .1;
 	attrib.weaponSpeed = 1.0;
 	attrib.weaponStrength = 1.0;
 	dir.set(1, 0);
 	m_map.init(initialData.mapData.width, initialData.mapData.height);
+	setPoint();
 	for (int y = 0; y < m_map.m_height; ++y)
 	{
 		for (int x = 0; x < m_map.m_width; ++x)
@@ -34,7 +35,10 @@ void Blank::init(const BotInitialData &initialData, BotAttributes &attrib)
 			m_map.getNode(NodePos(x, y)).wall = m_initialData.mapData.data[x + y*m_map.m_width].wall;
 		}
 	}
-	pathFind(NodePos(1, 1));
+	pathFind(NodePos(target.x, target.y));
+	currentMovementState = MovementState::MS_Random;
+	lastMovementState = currentMovementState;
+	aimDir.set(0, 1);
 }
 
 void Blank::update(const BotInput &input, BotOutput27 &output)
@@ -43,12 +47,42 @@ void Blank::update(const BotInput &input, BotOutput27 &output)
 	output.text.clear();
 	kf::Vector2 delta = target - input.position;
 	output.moveDirection = delta;
+	if (delta.length() < 0.8)
+	{
+		setPoint();
+		pathFind(NodePos(target.x, target.y));
+	}
+	bool spotted = false;
+	for (int i = 0; i < input.scanResult.size(); ++i)
+	{
+		if (input.scanResult[i].type == VisibleThing::e_robot)
+		{
+			enemyPos = input.scanResult[i].position;
+			enemySpottedFrame = frameNumber;
+			spotted = true;
+		}
+	}
+
+	if (spotted)
+	{
+		if (currentMovementState == MovementState::MS_Random)
+		{
+			output.lookDirection = enemyPos - input.position;
+			aimDir = output.lookDirection.rotate(m_initialData.scanFOV * -2);
+			output.action = BotOutput27::Action::shoot;
+		}
+	}
+	else
+	{
+		output.action = BotOutput27::Action::scan;
+		aimDir = aimDir.rotate(m_initialData.scanFOV * 2);
+		output.lookDirection = aimDir;
+	}
 	m_map.draw(output.lines, output.text, true, false, false);
 	kf::Vector2 parent = kf::convertVector2 <kf::Vector2>(m_map.getNode(input.position).parent);
 	output.moveDirection = parent - input.position + kf::Vector2(0.5f, 0.5f);
 	output.motor = 1.0;
-	output.lookDirection.set(0, 1);
-	output.action = BotOutput::scan;
+
 }
 
 void Blank::result(bool won)
@@ -58,16 +92,6 @@ void Blank::result(bool won)
 void Blank::bulletResult(bool hit)
 {
 
-}
-
-void Blank::pickRandomTarget()
-{
-	int index;
-	do
-	{
-		target.set(int(m_rand.norm() * (m_initialData.mapData.width - 3)) + 1.5, int(m_rand.norm() * (m_initialData.mapData.height - 3)) + 1.5);
-		index = int(target.x) + int(target.y) * m_initialData.mapData.width;
-	} while (m_initialData.mapData.data[index].wall);
 }
 
 void Blank::pathFind(NodePos endOfPath)
@@ -120,7 +144,7 @@ void Blank::pathFind(NodePos endOfPath)
 					//	adjacent G = new G
 					m_map.getNode(adjacentPos).g = g;
 					//	adjacent h = heuristic
-					m_map.getNode(adjacentPos).h = rand()%100;
+					m_map.getNode(adjacentPos).h = 0;
 					//	adjacent parent = current nodepos
 					m_map.getNode(adjacentPos).parent = currentPos;
 					//	adjacent f = adjacent g + adjacent heuristic
@@ -133,7 +157,7 @@ void Blank::pathFind(NodePos endOfPath)
 					//	adjacent G = new G
 					m_map.getNode(adjacentPos).g = g;
 					//	adjacent h = heuristic
-					m_map.getNode(adjacentPos).h = rand() % 100;
+					m_map.getNode(adjacentPos).h = 0;
 					//	adjacent parent = current nodepos
 					m_map.getNode(adjacentPos).parent = currentPos;
 					//	adjacent f = adjacent g + adjacent heuristic
@@ -154,10 +178,7 @@ void Blank::pathFind(NodePos endOfPath)
 				break;
 			}
 		}
-		if (currentPos == endOfPath) 
-		{
 
-		}
 	}
 }
 //	Now you can follow parent nodes from target back until the start to get the path.
@@ -165,14 +186,19 @@ void Blank::pathFind(NodePos endOfPath)
 //	To fill the map(dijkstra), set adjacent h to 0 above.
 //	This pseudo code doesn't stop when it finds a path, it keeps filling. To make it stop early, change the while loop to be while(openList is not empty and pathFound is false)
 
-void resetPoint()
+void Blank::setPoint()
 {
-	kf::Vector2 topLeft(1, 1);
-	kf::Vector2 bottomRight(30, 30);
-	if (int i = 1)
+	int index;
+	do
 	{
-		//TODO
-	}
+		target.set(int(m_rand.norm() * (m_initialData.mapData.width - 3)) + 1.5, int(m_rand.norm() * (m_initialData.mapData.height - 3)) + 1.5);
+		index = int(target.x) + int(target.y) * m_initialData.mapData.width;
+	} while (m_initialData.mapData.data[index].wall);
+}
+
+void Blank::resetPoint()
+{
+
 }
 
 
