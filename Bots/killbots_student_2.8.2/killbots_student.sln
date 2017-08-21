@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blankpath", "projects\blank
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trumpbot", "projects\trumpbot\trumpbot.vcxproj", "{39984338-838A-45CF-A77E-7205ADEF904B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BigDogBen96", "projects\BigDogBen96\BigDogBen96.vcxproj", "{C8A478DB-9A90-42EF-9933-23E8AECB866F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,10 @@ Global
 		{39984338-838A-45CF-A77E-7205ADEF904B}.Debug|x64.Build.0 = Debug|x64
 		{39984338-838A-45CF-A77E-7205ADEF904B}.Release|x64.ActiveCfg = Release|x64
 		{39984338-838A-45CF-A77E-7205ADEF904B}.Release|x64.Build.0 = Release|x64
+		{C8A478DB-9A90-42EF-9933-23E8AECB866F}.Debug|x64.ActiveCfg = Debug|x64
+		{C8A478DB-9A90-42EF-9933-23E8AECB866F}.Debug|x64.Build.0 = Debug|x64
+		{C8A478DB-9A90-42EF-9933-23E8AECB866F}.Release|x64.ActiveCfg = Release|x64
+		{C8A478DB-9A90-42EF-9933-23E8AECB866F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{D0F5A29F-64E4-4542-9592-822627724076} = {72534CB8-F183-455E-ABEA-969A5D349AA9}
 		{3DFA53DF-7DE3-4714-B4E8-1A42F8E0F186} = {72534CB8-F183-455E-ABEA-969A5D349AA9}
 		{E496A5BE-7687-414D-935A-361119943E7B} = {72534CB8-F183-455E-ABEA-969A5D349AA9}
+		{C8A478DB-9A90-42EF-9933-23E8AECB866F} = {72534CB8-F183-455E-ABEA-969A5D349AA9}
 	EndGlobalSection
 EndGlobal

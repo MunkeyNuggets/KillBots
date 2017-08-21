@@ -1,0 +1,48 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  pathfind.cpp
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(6): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(11): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(71): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(86): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(114): warning C4305: 'argument': truncation from 'double' to 'const float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(116): warning C4305: 'argument': truncation from 'double' to 'const float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(134): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(136): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(140): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(142): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(151): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(150): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\dev\sdk\include\kf\kf_vector2.h(543): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+  c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.cpp(136): note: see reference to function template instantiation 'T1 kf::convertVector2<kf::Vector2,NodePos>(const T2 &)' being compiled
+          with
+          [
+              T1=kf::Vector2,
+              T2=NodePos
+          ]
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\dev\sdk\include\kf\kf_vector2.h(544): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+  bot.cpp
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\pathfind.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(14): warning C4311: 'type cast': pointer truncation from 'BigDogBen96 *const ' to 'int'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(14): warning C4302: 'type cast': truncation from 'BigDogBen96 *const ' to 'int'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'kf::u32', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(25): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(134): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(145): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(158): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(194): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\dev\sdk\include\kf\kf_vector2.h(543): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+  c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\projects\bigdogben96\bot.cpp(82): note: see reference to function template instantiation 'T1 kf::convertVector2<kf::Vector2,NodePos>(const T2 &)' being compiled
+          with
+          [
+              T1=kf::Vector2,
+              T2=NodePos
+          ]
+c:\users\bhoughton\documents\killbots\bots\killbots_student_2.8.2\dev\sdk\include\kf\kf_vector2.h(544): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+  Generating Code...
+     Creating library C:\Users\bHoughton\Documents\KillBots\Bots\killbots_student_2.8.2\temp\Debug\BigDogBen96\BigDogBen96_d.lib and object C:\Users\bHoughton\Documents\KillBots\Bots\killbots_student_2.8.2\temp\Debug\BigDogBen96\BigDogBen96_d.exp
+  BigDogBen96.vcxproj -> C:\Users\bHoughton\Documents\KillBots\Bots\killbots_student_2.8.2\bin\data\bots\BigDogBen96\BigDogBen96_d.dll
+  BigDogBen96.vcxproj -> C:\Users\bHoughton\Documents\KillBots\Bots\killbots_student_2.8.2\bin\data\bots\BigDogBen96\BigDogBen96_d.pdb (Full PDB)
